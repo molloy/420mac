@@ -367,6 +367,14 @@ a:hover {
 	text-align:center;
 }
 
+#verification h2 {
+	padding: 0px 10px 5px;
+	font-size: 100%;
+	font-weight: bold;
+	color: #FF0000;
+	text-align:left;
+}
+
 #verification p {
 	padding:0px 10px 5px;
 	text-align:left;

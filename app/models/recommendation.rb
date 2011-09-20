@@ -7,4 +7,8 @@ class Recommendation < ActiveRecord::Base
       Emailer.deliver_recommendation_expiration(recommendation)
     end
   end
+  
+  def is_expired
+    Date.today > end_dt
+  end
 end

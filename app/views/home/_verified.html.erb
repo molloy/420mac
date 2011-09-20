@@ -2,6 +2,10 @@
 <p>
 </p>
 
+<% if @verification.is_expired %>
+	<h2>EXPIRED!!!</h1>
+<% end %>
+
 <p>
   First name:
   <b><%=h @verification.first_name %></b>
