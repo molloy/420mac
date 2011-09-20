@@ -1,0 +1,2 @@
+page.replace_html("mainbody", :partial => "faq")
+page.replace_html("title_head", :partial => "questions_head")

@@ -1,0 +1,12 @@
+<% content_for :title_head do %>
+<div id="team_head" class="image_header">
+  <h1>Administration</h1>
+  <ul>
+    <li><%= link_to 'Go to User Administration', :controller => 'users', :action => 'index' %></li>
+    <li><%= link_to 'Go to Recommendations Administration', :controller => 'recommendations', :action => 'index' %></li>
+    <li><%= link_to 'Logout', :controller => 'admin', :action => 'logout' %></li>
+  </ul>
+</div>
+<% end %>
+
+<h1>Administration</h1>

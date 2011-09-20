@@ -1,0 +1,10 @@
+development: &development
+    recommendation_expiring_in_final_notice: 0
+    recommendation_expiring_in_first_notice: 30
+    recommendation_expiring_in_second_notice: 14
+
+test:
+    <<: *development
+    
+production:
+    <<: *development

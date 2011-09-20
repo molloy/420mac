@@ -1,0 +1,50 @@
+<%= render :partial => 'header' %>
+
+<p>
+  <b>First name:</b>
+  <%=h @recommendation.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @recommendation.last_name %>
+</p>
+
+<p>
+  <b>Initials:</b>
+  <%=h @recommendation.initials %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%=h @recommendation.dob %>
+</p>
+
+<p>
+  <b>Id code:</b>
+  <%=h @recommendation.id_code %>
+</p>
+
+<p>
+  <b>Zipcode:</b>
+  <%=h @recommendation.zipcode %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @recommendation.email %>
+</p>
+
+<p>
+  <b>Start dt:</b>
+  <%=h @recommendation.start_dt %>
+</p>
+
+<p>
+  <b>End dt:</b>
+  <%=h @recommendation.end_dt %>
+</p>
+
+
+<%= link_to 'Edit', edit_recommendation_path(@recommendation) %> |
+<%= link_to 'Back', recommendations_path %>

@@ -1,0 +1,22 @@
+<%= render :partial => 'header' %>
+
+<h1>Listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%=h user.name %></td>
+    <td><%= button_to 'Show', user, :method => :get %></td>
+    <td><%= button_to 'Edit', edit_user_path(user), :method => :get %></td>
+    <td><%= button_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= button_to 'New user', new_user_path, :method => :get %>

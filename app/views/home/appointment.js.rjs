@@ -1,0 +1,2 @@
+page.replace_html("mainbody", :partial => "appointment")
+page.replace_html("title_head", :partial => "appointment_head")

@@ -1,0 +1,32 @@
+<% unless @recommendations == nil %>
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Initials</th>
+    <th>Date of birth</th>
+    <th>Last 4 digits of ID</th>
+    <th>Zipcode</th>
+    <th>Email</th>
+    <th>Start date</th>
+    <th>End date</th>
+  </tr>
+
+<% @recommendations.each do |recommendation| %>
+  <tr>
+    <td><%=h recommendation.first_name %></td>
+    <td><%=h recommendation.last_name %></td>
+    <td><%=h recommendation.initials %></td>
+    <td><%=h recommendation.dob %></td>
+    <td><%=h recommendation.id_code %></td>
+    <td><%=h recommendation.zipcode %></td>
+    <td><%=h recommendation.email %></td>
+    <td><%=h recommendation.start_dt %></td>
+    <td><%=h recommendation.end_dt %></td>
+    <td><%= button_to 'Show', recommendation, :method => :get %></td>
+    <td><%= button_to 'Edit', edit_recommendation_path(recommendation), :method => :get %></td>
+    <td><%= button_to 'Destroy', recommendation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<% end %>

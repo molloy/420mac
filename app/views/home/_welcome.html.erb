@@ -1,0 +1,69 @@
+<div id="mac_contentwrap">
+	<div id="mac_banner">
+		<a href=""><%= image_tag "banner1.jpg" %></a>
+	</div>
+	<div id="mac_3boxes">
+		<div id="mac_box">
+			<span class="greentitle">Get your card today!</span>
+			<%= image_tag "getyourcard.jpg" %>
+			<p class="blacktext">See a doctor and get a cannabis recommendation that will allow you to get treatment today</p>
+			<p class="readmore"><%= link_to_remote "read more", :url => { :controller => "home", :action => "faq" } %></p>
+		</div>
+		<div id="mac_box">
+			<span class="greentitle">Get verified today!</span>
+			<%= image_tag "getverified.jpg" %>
+			<p class="blacktext">Live Patient Verification to all our medical marijuana patients. Same Day Appointments Available.</p>
+			<p class="readmore"><%= link_to_remote "read more", :url => { :controller => "home", :action => "facts" } %></p>
+		</div>
+		<div id="mac_box" style="padding:0px;">
+			<span class="greentitle">Get your meds today!</span>
+			<%= image_tag "getyourmeds.jpg" %>
+			<p class="blacktext">Leave our office with everything you need to go to the nearest dispensary for your medicine</p>
+			<p class="readmore"><%= link_to_remote "read more", :url => { :controller => "home", :action => "faq" } %></p>
+		</div>
+	</div>
+	<div id="mac_leftside">
+		<div id="mac_welcome">
+			<span class="greentitle">Welcome to Medical Advisory Center</span>
+			<p><image_tag "womendoc.jpg">Medical Advisor Center is committed to PRIVATE, PROFESSIONAL, SAFE, DISCRETE & COMPASSIONATE consulting for WELLNESS. Our knowledgeable staff is dedicated to make the process as simple and informative as possible. Our STATEWIDE recognized and accepted physicianís recommendation for the legal use of Medical Cannabis (Marijuana) is provided by California Stateís Board Certified physicians.</p>
+		</div>
+		<div id="mac_schedule">
+			<%= link_to_remote image_tag("scheduleapt.jpg"), :url => { :controller => "home", :action => "appointment" } %>
+		</div>
+		<div id="mac_convenient">
+			<span class="greentitle">Convenient Location</span>
+			<p>(323) 965-0420<br> 4221 Wilshire Blvd, Suite 170-15<br> Los Angeles, CA 90010</p>
+		</div>
+		<div id="mac_whychoose">
+			<span class="greentitle">Why Choose Us</span>
+			<ul>
+				<li>Same Day Appts!</li>
+				<li>Safe & Confidential</li>
+				<li>24/7 Verification</li>
+				<li>Licensed MDs</li>
+			</ul>
+		</div>
+		<div id="mac_call">
+			<%= link_to_remote image_tag("calltoday.jpg"), :url => { :controller => "home", :action => "contact" } %>
+		</div>
+	</div>
+	<div id="mac_rightside">
+		<div id="mac_greybox">
+			<div id="mac_greytop"><%= image_tag "greytop.jpg" %></div>
+			<div id="mac_greymid">
+				<div id="mac_greybox">
+					<%= image_tag "afsa.jpg" %>
+					<span>Safe Access<br>(ASA) California<br>Supporter</span>
+					<p>Medical Advisory Center is a proud supporter of Americans for Safe Access here in California.</p>
+				</div>
+				<div id="mac_greybox">
+					<%= image_tag "cn.jpg" %>
+					<span>California NORML<br>California<br>Supporter</span>
+					<p>Medical Advisory Center is also a proud supporter of CANORML. California largest marijuana organization.</p>
+				</div>
+			</div>
+			<div id="mac_greybtm"><%= image_tag "greybtm.jpg" %></div>
+		</div>
+		<div id="mac_rightgreen"><%= image_tag "callusright.jpg" %></div>
+	</div>
+</div>

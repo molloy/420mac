@@ -1,0 +1,47 @@
+<% form_for(@recommendation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </p>
+  <p>
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :initials %><br />
+    <%= f.text_field :initials %>
+  </p>
+  <p>
+    <%= f.label :dob, "Date of birth" %><br />
+    <%= f.calendar_date_select :dob %>
+  </p>
+  <p>
+    <%= f.label :id_code, "Last 4 digits of ID" %><br />
+    <%= f.text_field :id_code %>
+  </p>
+  <p>
+    <%= f.label :zipcode, "Zip code" %><br />
+    <%= f.text_field :zipcode %>
+  </p>
+  <p>
+    <%= f.label :email, "Email address" %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :start_dt, "Start date" %><br />
+    <%= f.calendar_date_select :start_dt %>
+  </p>
+  <p>
+    <%= f.label :end_dt, "End date" %><br />
+    <%= f.calendar_date_select :end_dt %>
+  </p>
+  <br />
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>
+<br />
+<br />
+<%= link_to 'Back to search', recommendations_path %>

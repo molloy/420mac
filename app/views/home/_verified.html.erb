@@ -1,0 +1,50 @@
+<h1>Online Verification</h1>
+<p>
+</p>
+
+<p>
+  First name:
+  <b><%=h @verification.first_name %></b>
+</p>
+
+<p>
+  Last name:
+  <b><%=h @verification.last_name %></b>
+</p>
+
+<!--
+  <p>
+  Initials:
+  <b><%=h @verification.initials %></b>
+</p>
+-->
+
+<p>
+  Date of birth:</b>
+  <b><%=h @verification.dob %></b>
+</p>
+
+<!--
+  <p>
+  Last 4 digits of ID:
+  <b><%=h @verification.id_code %></b>
+</p>
+-->
+
+<p>
+  Recommendation start date:
+  <b><%=h @verification.start_dt %></b>
+</p>
+
+<p>
+  Recommendation expiration date:
+  <b><%=h @verification.end_dt %></b>
+</p>
+
+<p></p>
+
+<% form_remote_tag :url => { :action => "reset" }, :update => "verification" do %>
+<p>
+  <%= submit_tag("Reset") %>
+</p>
+<% end %>

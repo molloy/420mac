@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  dob: 2009-05-19
+  id_code: MyString
+  start_dt: 2009-05-19
+  end_dt: 2009-05-19
+
+two:
+  first_name: MyString
+  last_name: MyString
+  dob: 2009-05-19
+  id_code: MyString
+  start_dt: 2009-05-19
+  end_dt: 2009-05-19

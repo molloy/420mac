@@ -1,0 +1,34 @@
+<h1>Online Verification</h1>
+
+<p>
+  Please do not enter space or periods when entering initials
+</p>
+
+<p style="color: red"><%= flash[:error] %></p>
+
+<% form_remote_tag :url => { :controller => "home", :action => "verify" }, :update => "verification" do %>
+  <p class="Body">
+    <span class="style">
+      <%= label_tag :initials, "Patient's Initials:" %>
+    </span>
+  </p>
+  <p class="Body">
+    <span class="style">
+      <%= text_field_tag :initials %>
+    </span>
+  </p>
+  <p class="Body">
+    <span class="style">
+      <%= label_tag :id_code, "Last 4 Digits of Driver's LIC/ID:" %>
+    </span>
+  </p>
+  <p class="Body">
+    <span class="style">
+      <%= text_field_tag :id_code %>
+    </span>
+  </p>
+  <p></p>
+  <p>
+    <%= submit_tag("Verify") %>
+  </p>
+<% end %>

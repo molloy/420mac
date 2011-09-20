@@ -1,0 +1,9 @@
+--- 
+group: 420mac
+log_file: log/mongrel.log
+port: "4000"
+cwd: /home/420mac/420mac
+environment: production
+user: 420mac
+pid_file: tmp/pids/mongrel.pid
+servers: 2

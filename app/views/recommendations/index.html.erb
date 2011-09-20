@@ -1,0 +1,55 @@
+<%= render :partial => 'header' %>
+
+<h1>Find Recommendations</h1>
+
+<% form_remote_tag :url => { :action => "search" }, :update => "search_result" do %>
+<table>
+  <tr>
+    <td><%= label_tag(:first_name, "First name") %></td>
+    <td>starts with</td>
+    <td><%= text_field_tag(:first_name) %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag(:last_name, "Last name") %></td>
+    <td>starts with</td>
+    <td><%= text_field_tag(:last_name) %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag(:initials, "Initials") %></td>
+    <td>starts with</td>
+    <td><%= text_field_tag(:initials) %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag(:dob, "Date of birth") %></td>
+    <td>equals</td>
+    <td><%= calendar_date_select_tag :dob %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag(:id_code, "Last 4 digits of ID") %></td>
+    <td>starts with</td>
+    <td><%= text_field_tag(:id_code) %></td>
+  </tr>
+  <tr>
+    <td><%= label_tag(:start_dt, "End date") %></td>
+    <td>between</td>
+    <td><%= calendar_date_select_tag :start_dt %></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>and</td>
+    <td><%= calendar_date_select_tag :end_dt %></td>
+  </tr>
+</table>
+
+  <%= submit_tag("Search") %>
+
+<% end %>
+
+<br />
+<%= button_to 'New recommendation', new_recommendation_path, :method => :get %>
+
+<% content_for :search_result do %>
+<div id='search_result'>
+  <%= render :partial => "search_result" %>
+</div>
+<% end %>

@@ -1,0 +1,2 @@
+page.replace_html("mainbody", :partial => "facts")
+page.replace_html("title_head", :partial => "facts_head")

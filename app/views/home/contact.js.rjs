@@ -1,0 +1,2 @@
+page.replace_html("mainbody", :partial => "contact")
+page.replace_html("title_head", :partial => "contact_head")
